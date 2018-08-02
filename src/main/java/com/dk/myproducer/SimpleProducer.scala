@@ -19,7 +19,7 @@ object SimpleProducer {
 
         val producer = new KafkaProducer[String,String](pop)
 
-        for(i <- 0 until 100){
+        for(i <- 0 until 100000){
             val record = new ProducerRecord[String,String]("test3","Hello World from Mac!-----"+i)
             println(i)
             producer.send(record)
