@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="202e2ee7-1553-48d7-a515-e07c3a8844f6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_modules_scala_parser_combinators_2_11_1_0_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/scala_sdk_2_12_4.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/mykafka.iml" afterPath="$PROJECT_DIR$/mykafka.iml" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dk/myspark/MySparkStreaming.scala" afterPath="$PROJECT_DIR$/src/main/java/com/dk/myspark/MySparkStreaming.scala" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dk/myspark/MySparkStreaming$.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dk/myspark/MySparkStreaming.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dk/kafkaandspark/MyKafkaSpark.scala" afterPath="$PROJECT_DIR$/src/main/java/com/dk/kafkaandspark/MyKafkaSpark.scala" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -74,8 +67,8 @@
       <file leaf-file-name="MyKafkaSpark.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/dk/kafkaandspark/MyKafkaSpark.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="29" column="58" lean-forward="true" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
+            <state relative-caret-position="73">
+              <caret line="12" column="82" lean-forward="false" selection-start-line="12" selection-start-column="82" selection-end-line="12" selection-end-column="82" />
               <folding>
                 <element signature="e#30#93#0" expanded="true" />
               </folding>
@@ -652,8 +645,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dk/kafkaandspark/MyKafkaSpark.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="29" column="58" lean-forward="true" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
+        <state relative-caret-position="73">
+          <caret line="12" column="82" lean-forward="false" selection-start-line="12" selection-start-column="82" selection-end-line="12" selection-end-column="82" />
           <folding>
             <element signature="e#30#93#0" expanded="true" />
           </folding>

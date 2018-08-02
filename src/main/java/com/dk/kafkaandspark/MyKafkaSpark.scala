@@ -10,7 +10,7 @@ import org.apache.spark.streaming.kafka010.ConsumerStrategies.Subscribe
 
 object MyKafkaSpark {
     def main(args: Array[String]): Unit = {
-        val conf = new SparkConf().setMaster("local[*]").setAppName("NetworkWordCount")
+        val conf = new SparkConf().setMaster("local[*]").setAppName("KafkaAndSpark")
         val ssc = new StreamingContext(conf,Seconds(2))
 
 
