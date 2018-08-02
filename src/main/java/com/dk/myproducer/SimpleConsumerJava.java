@@ -7,6 +7,9 @@ import org.apache.kafka.clients.consumer.KafkaConsumer;
 import java.util.Arrays;
 import java.util.Properties;
 
+/**
+ * 消费者
+ */
 public class SimpleConsumerJava {
 	public static void main(String[] args){
 		Properties props = new Properties();

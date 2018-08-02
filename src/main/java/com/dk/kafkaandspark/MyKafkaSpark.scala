@@ -7,7 +7,9 @@ import org.apache.spark.streaming.kafka010._
 import org.apache.spark.streaming.kafka010.LocationStrategies.PreferConsistent
 import org.apache.spark.streaming.kafka010.ConsumerStrategies.Subscribe
 
-
+/**
+  * kafka and spark
+  */
 object MyKafkaSpark {
     def main(args: Array[String]): Unit = {
         val conf = new SparkConf().setMaster("local[*]").setAppName("KafkaAndSpark")

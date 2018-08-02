@@ -5,6 +5,9 @@ import java.util.Properties
 
 import org.apache.kafka.clients.producer.{KafkaProducer, Producer, ProducerConfig, ProducerRecord}
 
+/**
+  * 生产者
+  */
 object SimpleProducer {
     def main(args: Array[String]): Unit = {
         val pop = new Properties

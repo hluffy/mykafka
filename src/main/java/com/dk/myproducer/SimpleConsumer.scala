@@ -6,7 +6,9 @@ import java.util.{Collections, Properties}
 import org.apache.kafka.clients.consumer.{ConsumerRecord, ConsumerRecords, KafkaConsumer}
 
 
-
+/**
+  * 消费者
+  */
 object SimpleConsumer {
     def main(args: Array[String]): Unit = {
         val props = new Properties
