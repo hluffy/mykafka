@@ -41,6 +41,7 @@ object SimpleConsumer {
                 printf("offset = %d, key = %s, value = %s%n", record.offset(), record.key(), record.value())
             })
 
+
         }
 
     }
