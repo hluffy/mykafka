@@ -1,7 +1,9 @@
 package com.dk.myspark
 
 import org.apache.spark.SparkConf
+import org.apache.spark.sql.SparkSession
 import org.apache.spark.streaming.{Seconds, StreamingContext}
+
 
 class MySparkStreaming {
 
@@ -18,7 +20,21 @@ object MySparkStreaming {
         val pairs = words.map(word => (word,1))
         val wordCounts = pairs.reduceByKey(_+_)
 
-        wordCounts.print
+//        wordCounts.print
+        wordCounts.foreachRDD(rdd => {
+            val spark = SparkSession.builder().config(rdd.sparkContext.getConf).getOrCreate()
+
+            import spark.implicits._
+
+            val wordsDataFrame = rdd.toDF("word","num")
+            wordsDataFrame.createOrReplaceTempView("words")
+
+//            val wordCountsDataFrame = spark.sql("select word,count(*) as total from words group by word")
+            val wordCountsDataFrame = spark.sql("select * from words")
+
+            wordCountsDataFrame.show
+        })
+
 
         ssc.start
         ssc.awaitTermination
