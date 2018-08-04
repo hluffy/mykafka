@@ -5,6 +5,9 @@ import org.apache.hadoop.hbase.mapreduce.TableInputFormat
 import org.apache.hadoop.hbase.util.Bytes
 import org.apache.spark.{SparkConf, SparkContext}
 
+/**
+  * spark读hbase
+  */
 object MySparkHbase {
     def main(args: Array[String]): Unit = {
         val config = new SparkConf().setMaster("local[*]").setAppName("KafkaAndSpark")
