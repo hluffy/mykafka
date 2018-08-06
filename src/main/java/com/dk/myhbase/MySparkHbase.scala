@@ -18,7 +18,7 @@ object MySparkHbase {
 //        conf.set("hbase.zookeeper.quorum", "master")
 
         //设置查询的表名
-        conf.set(TableInputFormat.INPUT_TABLE, "test")
+        conf.set(TableInputFormat.INPUT_TABLE, "users")
 
         val usersRDD = sc.newAPIHadoopRDD(conf, classOf[TableInputFormat],
             classOf[org.apache.hadoop.hbase.io.ImmutableBytesWritable],
@@ -31,20 +31,22 @@ object MySparkHbase {
 
         //遍历输出
         usersRDD.foreach{ case (_,result) =>
-            val key = Bytes.toInt(result.getRow)
-            val b = Bytes.toString(result.getValue("cf".getBytes,"b".getBytes))
-            val name = Bytes.toString(result.value)
+            val id = Bytes.toString(result.getRow)
+            val birthday = Bytes.toString(result.getValue("cf".getBytes,"birthday".getBytes))
+            val name = Bytes.toString(result.getValue("cf".getBytes,"name".getBytes))
+            val telephone = Bytes.toString(result.getValue("cf".getBytes,"telephone".getBytes))
+            val password = Bytes.toString(result.getValue("cf".getBytes,"password".getBytes))
 //            val age = Bytes.toInt(result.getValue("cf".getBytes,"b".getBytes))
 //            println("Row key:"+key+" Name:"+name+" Age:"+age)
-            println(key+":"+name+":"+b)
+            println(id+"--"+name+"--"+birthday+"--"+telephone+"--"+password)
         }
-        println("--------------------------------------------------")
-        usersRDD.foreach(result => {
-            val key = Bytes.toInt(result._2.getRow)
-            val name = Bytes.toString(result._2.value)
-            println(key+":"+name)
-
-        })
+//        println("--------------------------------------------------")
+//        usersRDD.foreach(result => {
+//            val key = Bytes.toInt(result._2.getRow)
+//            val name = Bytes.toString(result._2.value)
+//            println(key+":"+name)
+//
+//        })
 
     }
 
